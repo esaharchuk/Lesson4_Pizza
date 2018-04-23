@@ -1,38 +1,25 @@
 package by.htp.lsn.runner;
 
-import by.htp.pizza.pizzaservice.Pizza;
-import by.htp.pizza.pizzaservice.PizzaHouse;
+import by.htp.lsn.pizza_service.Console;
+import by.htp.lsn.pizza_service.Order;
+import by.htp.lsn.pizza_service.Pizza;
 
 public class MainApp {
 
 	public static void main(String[] args) {
-		
-		
-		char[] title1;
-		Pizza pizza = new Pizza();
-		System.out.println(title1);
-		
-		
-		Pizza pizza2 = new Pizza();
-		pizza.size = 42;
-		pizza.title = "Italy";
-		
-		Pizza pizza3 = new Pizza();
-		pizza.size = 36;
-		pizza.title = "Margarita";
 
+		Pizza pizza1 = new Pizza();
+		Order ord = new Order();
+		Console input = new Console();
 
-		PizzaHouse house = new PizzaHouse();
-		Pizza pizza3 = house.cookPizza();
-		
-		System.out.println();
-		
-		//Ask for pizza
-		
-		// Cook pizza
-		
-		// Deliver pizza
+		int pizzaName = input.pizzaName();
+		int pizzaSize = input.pizzaSize();
+		int pizzaDough = input.pizzaDough();
+		String setAddress = input.setAddress();
+
+		pizza1 = ord.cookPizza(pizzaName, pizzaSize, pizzaDough);
+
+		setAddress.length();
 
 	}
-
 }

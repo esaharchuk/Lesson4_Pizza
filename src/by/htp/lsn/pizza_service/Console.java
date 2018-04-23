@@ -4,36 +4,43 @@ import java.util.Scanner;
 
 public class Console {
 
-	public class Input {
+	Scanner sc = new Scanner(System.in);
 
-		Scanner sc = new Scanner(System.in);
+	public int pizzaName() {
 
-		public String pizzaName() {
+		System.out.println("Выберите пиццу");
 
-			System.out.println("Выберите пиццу");
+		int name = sc.nextInt();
 
-			String name = sc.next();
+		return name;
+	}
 
-			return name;
-		}
-		
-		public int pizzaSize() {
-			
-			System.out.println("Выберите размер");
-			
-			int size = sc.nextInt();
-			
-			return size;
-		}
-		
-		public String pizzaDough() {
-			
-			System.out.println("Выберите тесто");
-			
-			String dough = sc.next();
-			
-			return dough;
-		}
+	public int pizzaSize() {
+
+		System.out.println("Выберите размер");
+
+		int size = sc.nextInt();
+
+		return size;
+	}
+
+	public int pizzaDough() {
+
+		System.out.println("Выберите тесто");
+
+		int dough = sc.nextInt();
+
+		return dough;
+	}
+
+	public String setAddress() {
+
+		System.out.println("Укажите адрес доставки");
+
+		String adress = sc.next();
+
+		return adress;
 
 	}
+
 }
